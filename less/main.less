@@ -1,28 +1,44 @@
 @import 'mixins';
 
-.banner-fig {
-    z-index: 99;
-    max-width: 90%;
-}
-
-.over-hero-div {
-    z-index: 100;
-    display: absolute;
-}
+// Global
 
 nav {
     .nav();
-}
-
-button {
-    .button();
 }
 
 footer {
     .footer();
 }
 
-.flex {
-    display: flex;
-    flex-wrap: wrap;
+h2 {
+    .h2();
+}
+
+header {
+    background-image: url('img/banner-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 40vh;
+    width: 100vw;
+}
+
+button {
+    .button();
+    &:hover {
+        background-color: @red;
+        color: @white;
+    }
+}
+
+
+.article-plain {
+    padding:35px;
+}
+
+.article-white {
+    background-color: @white;
+    padding: 40px;
+    margin-top: 40px;
 }
