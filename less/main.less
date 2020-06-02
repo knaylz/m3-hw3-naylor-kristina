@@ -3,11 +3,48 @@
 // Global
 
 nav {
+    ul {
+    margin: auto;
+    @media(min-width: 320px) {
+        padding-inline-start: 0px;
+    }
+
+    @media(min-width: 768px) {
+          text-align: left;
+          padding: @padding-30;
+          margin-left: @margin-50;
+      }
+
+    li {
+    @media(min-width: 320px) {
+           display: block;
+           text-align: center;
+           padding: @padding-5;
+           border-top: 1px solid #ffffff;
+        }
+
+    @media(min-width: 768px) {
+        display: inline-block;
+        text-align: start;
+        margin-right: @margin-20;
+        margin-left: @margin-15;
+        border-top: none;
+    }   
+    }
+    }
+
     .nav();
+    margin-bottom: 0;
+    
+}
+
+    nav, h2, p, button { 
+        font-family: @font-face;
 }
 
 footer {
     .footer();
+    .border-top();
 }
 
 h2 {
@@ -15,13 +52,9 @@ h2 {
 }
 
 header {
-    background-image: url('img/banner-bg.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
-    height: 40vh;
-    width: 100vw;
+    margin-top: 0px;
+    min-height: 400px;
 }
 
 button {
@@ -32,13 +65,66 @@ button {
     }
 }
 
-
 .article-plain {
     padding:35px;
+    margin-top: @margin-15;
+    .h2-red {
+        color: @red;
+    }
 }
 
 .article-white {
     background-color: @white;
     padding: 40px;
     margin-top: 40px;
+    .h2-red {
+        color: @red;
+    }
+    .h2-small {
+        text-transform: @transform-lowercase;
+    }
+}
+
+nav {
+    li {
+        display: @inline;
+        padding: @padding-40 @padding-20;
+        font-weight: @weight-500;
+        span {
+            color: @red;
+            text-transform: @transform-uppercase;
+        }
+    }
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: 100%;
+}
+
+/*Fix because image is not very wide*/
+.burger-fig {
+    margin-left: @margin-25;
+     @media(min-width: 1300px){
+        margin-left: @margin-40;
+    }
+
+    @media(min-width: 1600px){
+        margin-left: @margin-60;
+    }
+
+    @media(min-width: 1800px){
+        margin-left: @margin-90;
+    }
+}
+
+.hero-words {
+    margin-top: @margin-40;
+}
+
+.banner-overlay {
+    background-image: url('../img/banner-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

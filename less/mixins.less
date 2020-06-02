@@ -9,12 +9,11 @@
 .footer {
     background-color: @black;
     padding: 10px;
-    border-top: 10px solid @yellow;
 }
 
 // Headings
 .h2 {
-    text-transform: uppercase;
+    text-transform: @transform-uppercase;
 }
 
 // Buttons
@@ -24,6 +23,12 @@
     font-weight: @weight-500;
     padding: 10px 25px;
     border-radius: 8px;
-    text-transform: uppercase;
+    text-transform: @transform-uppercase;
     border: 0;
+}
+
+// Borders
+.border-top {
+    border-top: @border-15 solid;
+    border-color: @yellow;
 }
